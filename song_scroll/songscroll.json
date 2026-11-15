@@ -1,6 +1,14 @@
 {
-  "release1": {
+  "releases": [
+    
+    {
+    "name":"Mulberry Shrine",
+    "cover": "https://raw.githubusercontent.com/fkpcomposer/fkpcomposer.github.io/refs/heads/main/song_scroll/mulberry-shrine.jpg"
+    }
+    {
     "name":"Midnight in Scratchtown",
-    "cover": "https://github.com/fkpcomposer/fkpcomposer.github.io/blob/main/song_scroll/mis-ost.png?raw=true"
-  }
+    "cover": "https://raw.githubusercontent.com/fkpcomposer/fkpcomposer.github.io/refs/heads/main/song_scroll/mis-ost.png"
+    }
+    
+  ]
 }

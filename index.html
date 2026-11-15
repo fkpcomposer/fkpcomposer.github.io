@@ -122,7 +122,7 @@ let img = new Image();
 img.src = releases[i].cover;
 img.dataset.index = i
 img.height = 300;
-img.onclick = () => { changePlayerSong(0) }
+img.onclick = () => { changePlayerSong(i) }
 document.getElementById("songscroll").appendChild(img);
 }
 

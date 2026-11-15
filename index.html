@@ -1,17 +1,23 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>FKPC</title>
+	<title>FKPC</title>
+    
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Urbanist:ital@0;1&display=swap" rel="stylesheet">
 </head>
 <style>
 
 	body{
 		text-align: center;
         background-color: black;
+        padding: 20px;
+        font-family: "Urbanist", sans-serif;
 	}
     
     .first-thing{
-    	background-image: url("https://github.com/fkpcomposer/fkpcomposer.github.io/blob/main/images/fkpc%20website%20background.png?raw=true");
+    	background-image: url("https://github.com/fkpcomposer/fkpcomposer.github.io/blob/main/images/first-thing-bg.png?raw=true");
         background-position: center;
         background-size: cover;
         
@@ -19,15 +25,64 @@
         padding: 50px;
     }
     
+    .discography{
+    	background-image: url("https://github.com/fkpcomposer/fkpcomposer.github.io/blob/main/images/discography-bg.png?raw=true");
+        background-position: center;
+        background-size: cover;
+        
+        border-radius: 10px;
+        padding: 50px;
+        
+        color: white;
+    }
+    
+    .song-scroll{
+        display: grid;
+        grid-auto-flow: column;
+        gap: 5px;
+        overflow-x: auto;
+        overflow-y: hidden;
+    }
+    
+        .song-scroll img {
+    	height: 300px;
+        border-radius: 10px;
+    }
+    
+    ::-webkit-scrollbar{
+    	display: none;
+    }
+    
 </style>
 <body>
 
 	<div class="first-thing">
 		<img src="https://raw.githubusercontent.com/fkpcomposer/fkpcomposer.github.io/4cdf3f106002997d257415283c5391b266d51d11/images/fkpc%20logo.svg" width=500>
-		<p>I'm 14 and I don't know what to do with my life :3</p>
-		<p> <a href="https://fkpc.newgrounds.com">Newgrounds</a> // <a href="https://soundcloud.com/fkpcmusic">SoundCloud</a> // <a href="https://youtube.com/@FKPCmusic">Youtube</a></p>
+		<p>I'm 14 and I don't know what to do with my life :3<br><a href="https://fkpc.newgrounds.com">Newgrounds</a> // <a href="https://soundcloud.com/fkpcmusic">SoundCloud</a> // <a href="https://youtube.com/@FKPCmusic">Youtube</a></p>
 		<img src="https://github.com/fkpcomposer/fkpcomposer.github.io/blob/main/images/synth%20pose.png?raw=true" width=200>
 	</div>
+    
+    <div class="discography">
+		<h1>Discography</h1>
+        <p>I put notes in a grid until it sounds nice!</p>
+        <div class="song-scroll">
+        	<div>
+        	<img src="https://github.com/fkpcomposer/fkpcomposer.github.io/blob/main/images/first-thing-bg.png?raw=true">
+            <p><b>Midnight in Scratchtown (Original Soundtrack)</b></p>
+            </div>
+        	<img src="https://github.com/fkpcomposer/fkpcomposer.github.io/blob/main/images/first-thing-bg.png?raw=true">
+        	<img src="https://github.com/fkpcomposer/fkpcomposer.github.io/blob/main/images/first-thing-bg.png?raw=true">
+        	<img src="https://github.com/fkpcomposer/fkpcomposer.github.io/blob/main/images/first-thing-bg.png?raw=true">
+            <img src="https://github.com/fkpcomposer/fkpcomposer.github.io/blob/main/images/first-thing-bg.png?raw=true">
+        	<img src="https://github.com/fkpcomposer/fkpcomposer.github.io/blob/main/images/first-thing-bg.png?raw=true">
+        	<img src="https://github.com/fkpcomposer/fkpcomposer.github.io/blob/main/images/first-thing-bg.png?raw=true">
+        	<img src="https://github.com/fkpcomposer/fkpcomposer.github.io/blob/main/images/first-thing-bg.png?raw=true">
+        </div>
+    	<audio controls style="margin-top:20px;width:90%;">
+  			<source src="horse.mp3" type="audio/mpeg">
+		</audio>
+	</div>
+
 
 </body>
 </html>

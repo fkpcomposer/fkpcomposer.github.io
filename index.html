@@ -42,15 +42,21 @@
         gap: 5px;
         overflow-x: auto;
         overflow-y: hidden;
+        margin-bottom: 20px;
     }
     
-        .song-scroll img {
-    	height: 300px;
+    .song-scroll img {
+        height: 300px;
         border-radius: 10px;
     }
-    
+
     ::-webkit-scrollbar{
     	display: none;
+    }
+
+    hr {
+      height: 2px;
+      background-color: white;
     }
     
 </style>
@@ -61,18 +67,18 @@
 		<p>I'm 14 and I don't know what to do with my life :3<br><a href="https://fkpc.newgrounds.com">Newgrounds</a> // <a href="https://soundcloud.com/fkpcmusic">SoundCloud</a> // <a href="https://youtube.com/@FKPCmusic">Youtube</a></p>
 		<img src="images/synth-pose.png" width=200>
 	</div>
-    <hr style="height:2px;background-color:white">
+    <hr>
     <div class="discography">
-		<h1>Discography</h1>
-        <p>I put notes in a grid until it sounds nice!<br>I've listed some of my best music below</p>
+		<h1 style="margin-bottom:0px;">Discography</h1>
+        <p style="margin-top:5px;">I put notes in a grid until it sounds nice! I've listed some of my best music below.</p>
+        <hr style="height:1px;">
         <div class="song-scroll" id="songscroll">
         </div>
-		<audio controls>
-        <source src="horse.ogg" type="audio/ogg">
+		<audio controls style="width:80%;" id="playeraudio">
         <source src="horse.mp3" type="audio/mpeg">
-        </audio>
-        <p id="playername">Click on a track to hear a preview!</p>
-        <p id="playerlinks"></p>
+    </audio>
+    <p id="playername" style="margin-bottom:5px;">Click on a track to hear a preview!</p>
+    <p id="playerlinks" style="margin-top:0px;opacity:0.5;font-size:13px;">Links will appear here...</p>
 	</div>
 
 
@@ -81,8 +87,13 @@
 let releases = [
   {
     name: "Mulberry Shrine",
-    cover: "song_scroll/mulberry-shrine.jpg"
+    cover: "song_scroll/mulberry-shrine.jpg",
     audiolink: "song_scroll/mulberry-shrine.mp3"
+  },
+  {
+    name: "Midnight in Scratchtown (Original Soundtrack)",
+    cover: "song_scroll/mis-ost.png",
+    audiolink: "song_scroll/mis-ost.mp3"
   },
   {
     name: "Acrobatics",
@@ -93,16 +104,31 @@ let releases = [
     name: "Siga A Estrada",
     cover: "song_scroll/siga-a-estrada.png",
     audiolink: "song_scroll/siga-a-estrada.mp3"
+  },
+  {
+    name: "Outer Signal",
+    cover: "song_scroll/outer-signal.png",
+    audiolink: "song_scroll/outer-signal.mp3"
+  },
+  {
+    name: "Nostalgic Seashore",
+    cover: "song_scroll/nostalgic-seashore.png",
+    audiolink: "song_scroll/nostalgic-seashore.mp3"
   }
 ];
 
 for (let i = 0; i < releases.length; i++){
 let img = new Image();
 img.src = releases[i].cover;
-img.dataset.name = releases[i].name;
-img.dataset.links = releases[i].links;
-img.dataset.audiolink = releases[i].audiolink;
+img.dataset.index = i
+img.height = 300;
+img.onclick = () => { changePlayerSong(0) }
 document.getElementById("songscroll").appendChild(img);
+}
+
+function changePlayerSong(index) {
+    document.getElementById("playeraudio").src = releases[index].audiolink;
+    document.getElementById("playername").innerHTML = releases[index].name;
 }
 </script>
 </html>

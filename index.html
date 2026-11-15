@@ -74,7 +74,7 @@
         <hr style="height:1px;">
         <div class="song-scroll" id="songscroll">
         </div>
-		<audio controls style="width:80%;" id="playeraudio">
+		<audio controls style="width:80%;display:none;" id="playeraudio">
         <source src="horse.mp3" type="audio/mpeg">
     </audio>
     <p id="playername" style="margin-bottom:5px;">Click on a track to hear a preview!</p>
@@ -128,6 +128,8 @@ document.getElementById("songscroll").appendChild(img);
 function changePlayerSong(name, audiolink) {
     document.getElementById("playername").innerHTML = name;
     document.getElementById("playeraudio").src = audiolink;
+	document.getElementById("playeraudio").play();
+	document.getElementById("playeraudio").style = "width:80%;display:none;";
 }
 </script>
 </html>

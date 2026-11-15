@@ -88,7 +88,7 @@ let releases = [
   {
     name: "Mulberry Shrine",
     cover: "song_scroll/mulberry-shrine.jpg",
-    audiolink: "song_scroll/mulberry_shrine.mp3"
+    audiolink: "song_scroll/mulberry-shrine.mp3"
   },
   {
     name: "Midnight in Scratchtown (Original Soundtrack)",
@@ -120,15 +120,14 @@ let releases = [
 for (let i = 0; i < releases.length; i++){
 let img = new Image();
 img.src = releases[i].cover;
-img.dataset.index = i
 img.height = 300;
-img.onclick = () => { changePlayerSong(i) }
+img.onclick = () => {changePlayerSong(releases[i].name, releases[i].audiolink)}
 document.getElementById("songscroll").appendChild(img);
 }
 
-function changePlayerSong(index) {
-    document.getElementById("playeraudio").src = releases[index].audiolink;
-    document.getElementById("playername").innerHTML = releases[index].name;
+function changePlayerSong(name, audiolink) {
+    document.getElementById("playername").innerHTML = name;
+    document.getElementById("playeraudio").src = audiolink;
 }
 </script>
 </html>

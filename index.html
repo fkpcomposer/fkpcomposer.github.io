@@ -65,38 +65,43 @@
     <div class="discography">
 		<h1>Discography</h1>
         <p>I put notes in a grid until it sounds nice!<br>I've listed some of my best music below</p>
-        <div class="song-scroll">
-			<!-- I seriously need to learn JS and JSON -->
-        	<div>
-        	<img src="song_scroll/mulberry-shrine.jpg">
-            <p><b>Mulberry Shrine<b></p>
-            </div>
-        	<div>
-        	<img src="song_scroll/outer-signal.png">
-            <p><b>Outer Signal<b></p>
-            </div>
-			<div>
-        	<img src="song_scroll/mis-ost.png">
-            <p><b>Midnight in Scratchtown (Original Soundtrack)</b></p>
-            </div>
-        	<div>
-        	<img src="song_scroll/acrobatics.png">
-            <p><b>Acrobatics<b></p>
-            </div>
-        	<div>
-        	<img src="song_scroll/nostalgic-seashore.png">
-            <p><b>Nostalgic Seashore<b></p>
-            </div>
-			<div>
-        	<img src="song_scroll/siga-a-estrada.png">
-            <p><b>Siga a Estrada</b></p>
-            </div>
+        <div class="song-scroll" id="songscroll">
         </div>
-    	<audio controls style="margin-top:20px;width:90%;">
-  			<source src="horse.mp3" type="audio/mpeg">
+        <p id="playername">Click on a track to hear a preview!</p>
+         <p id="playerlinks"></p>
+    	<audio id="playeraudio" controls style="margin-top:20px;width:90%;">
+  			<source type="audio/mpeg">
 		</audio>
 	</div>
 
 
 </body>
+<script>
+let releases = [
+  {
+    name: "Mulberry Shrine",
+    cover: "song_scroll/mulberry-shrine.jpg"
+    audiolink: "song_scroll/mulberry-shrine.mp3"
+  },
+  {
+    name: "Acrobatics",
+    cover: "song_scroll/acrobatics.png",
+    audiolink: "song_scroll/acrobatics.mp3"
+  },
+  {
+    name: "Siga A Estrada",
+    cover: "song_scroll/siga-a-estrada.png",
+    audiolink: "song_scroll/siga-a-estrada.mp3"
+  }
+];
+
+for (let i = 0; i < releases.length; i++){
+let img = new Image();
+img.src = releases[i].cover;
+img.dataset.name = releases[i].name;
+img.dataset.links = releases[i].links;
+img.dataset.audiolink = releases[i].audiolink;
+document.getElementById("songscroll").appendChild(img);
+}
+</script>
 </html>

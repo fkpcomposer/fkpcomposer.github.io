@@ -127,7 +127,6 @@ let img = new Image();
 img.src = releases[i].cover;
 img.alt: releases[i].alt
 img.title = releases[i].name
-img.height = 300;
 img.onclick = () => {changePlayerSong(releases[i].name, releases[i].links, releases[i].audiolink)}
 document.getElementById("songscroll").appendChild(img);
 }

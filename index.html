@@ -82,28 +82,31 @@
 	</div>
 
 
-</body>
 <script>
 let releases = [
   {
     name: "Mulberry Shrine",
     cover: "song_scroll/mulberry-shrine.jpg",
-    audiolink: "song_scroll/mulberry-shrine.mp3"
+    audiolink: "song_scroll/mulberry-shrine.mp3",
+	alt: "A heavily edited photograph of a mulberry tree."
   },
   {
     name: "Midnight in Scratchtown (Original Soundtrack)",
     cover: "song_scroll/mis-ost.png",
-    audiolink: "song_scroll/midnight-in-scratchtown.mp3"
+    audiolink: "song_scroll/midnight-in-scratchtown.mp3",
+	alt: "A hand-made drawing of a ghost wandering around a town haunted by other ghosts."
   },
   {
     name: "Acrobatics",
     cover: "song_scroll/acrobatics.png",
-    audiolink: "song_scroll/acrobatics.mp3"
+    audiolink: "song_scroll/acrobatics.mp3",
+	alt: "A vector drawing about a black circle with legs running desperately from colorful geometrical shapes."
   },
   {
     name: "Siga A Estrada",
     cover: "song_scroll/siga-a-estrada.png",
-    audiolink: "song_scroll/siga-a-estrada.mp3"
+    audiolink: "song_scroll/siga-a-estrada.mp3",
+	alt: "A turtle with wheels and a race-car-themed shell wearing googles. The turtle runs on a street and there is an island with multiple different areas visible in the background."
   },
   {
     name: "Outer Signal",
@@ -113,13 +116,16 @@ let releases = [
   {
     name: "Nostalgic Seashore",
     cover: "song_scroll/nostalgic-seashore.png",
-    audiolink: "song_scroll/nostalgic-seashore.mp3"
+    audiolink: "song_scroll/nostalgic-seashore.mp3",
+	alt: "A hand-made drawing without outlines showing water and a bright glowing sun in the background."
   }
 ];
 
 for (let i = 0; i < releases.length; i++){
 let img = new Image();
 img.src = releases[i].cover;
+img.alt: releases[i].alt
+img.title = releases[i].name
 img.height = 300;
 img.onclick = () => {changePlayerSong(releases[i].name, releases[i].audiolink)}
 document.getElementById("songscroll").appendChild(img);
@@ -131,4 +137,5 @@ function changePlayerSong(name, audiolink) {
 	document.getElementById("playeraudio").play();
 }
 </script>
+</body>
 </html>

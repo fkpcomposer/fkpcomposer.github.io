@@ -42,6 +42,7 @@ color: #FAE667;
 
 .discography a:hover {
 color: white;
+opacity: 1;
 }
     
 .song-scroll{

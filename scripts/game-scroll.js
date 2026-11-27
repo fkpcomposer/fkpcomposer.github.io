@@ -11,18 +11,5 @@ let gameDiv = document.createElement("div");
 let gameImage = new Image();
 gameImage.src = games[i].cover;
 gameImage.style = "border-radius:10px;";
-
-let gameDesc = document.createElement("p");
-gameDesc.innerHTML = games[i].desc;
-gameDesc.style = "background-color:white;";
-
-let gameLinks = document.createElement("p");
-gameLinks.innerHTML = games[i].links;
-gameLinks.style = "background-color:white;";
-
-gameDiv.appendChild(gameImage);
-gameDiv.appendChild(gameDesc);
-gameDiv.appendChild(gameLinks);
-gameDiv.style = "padding:20px;border-radius:10px;background-color:white;";
-document.getElementById("gamescroll").appendChild(gameDiv);
+document.getElementById("gamescroll").appendChild(gameImage);
 }

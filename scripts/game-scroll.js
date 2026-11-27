@@ -6,10 +6,7 @@ let games = [
 ];
 
 for (let i = 0; i < games.length; i++){
-let gameDiv = document.createElement("div");
-
-let gameImage = new Image();
-gameImage.src = games[i].cover;
-gameImage.style = "border-radius:10px;";
-document.getElementById("gamescroll").appendChild(gameImage);
+let img = new Image();
+img.src = games[i].cover;
+document.getElementById("gamescroll").appendChild(img);
 }

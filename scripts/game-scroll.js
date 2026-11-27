@@ -5,7 +5,7 @@ let games = [
   }
 ];
 
-for (let i = 0; i < releases.length; i++){
+for (let i = 0; i < games.length; i++){
 let gameDiv = document.createElement("div");
 
 let gameImage = new Image();
@@ -24,5 +24,5 @@ gameDiv.appendChild(gameImage);
 gameDiv.appendChild(gameDesc);
 gameDiv.appendChild(gameLinks);
 gameDiv.style = "padding:20px;border-radius:10px;background-color:white;";
-document.getElementById("game-list").appendChild(gameDiv);
+document.getElementById("gamescroll").appendChild(gameDiv);
 }

@@ -45,8 +45,7 @@ color: white;
 opacity: 1;
 }
     
-.song-scroll,
-.game-scroll{
+.song-scroll{
 display: grid;
 grid-auto-flow: column;
 gap: 5px;
@@ -55,7 +54,8 @@ overflow-y: hidden;
 margin-bottom: 20px;
 }
     
-.song-scroll img {
+.song-scroll img,
+.game-scroll img{
 height: 300px;
 border-radius: 10px;
 }

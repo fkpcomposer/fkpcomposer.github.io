@@ -45,7 +45,8 @@ color: white;
 opacity: 1;
 }
     
-.song-scroll{
+.song-scroll,
+.game-scroll{
 display: grid;
 grid-auto-flow: column;
 gap: 5px;

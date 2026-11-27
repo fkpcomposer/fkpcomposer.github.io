@@ -10,6 +10,7 @@ let gameDiv = document.createElement("div");
 
 let gameImage = new Image();
 gameImage.src = games[i].cover;
+gameImage.style = "border-radius:10px;";
 
 let gameDesc = document.createElement("p");
 gameDesc.innerHTML = games[i].desc;

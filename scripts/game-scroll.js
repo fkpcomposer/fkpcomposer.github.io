@@ -24,5 +24,5 @@ gameDiv.appendChild(gameImage);
 gameDiv.appendChild(gameDesc);
 gameDiv.appendChild(gameLinks);
 gameDiv.style = "padding:20px;border-radius:10px;background-color:white;";
-document.getElementById("gamescroll").appendChild(gameDiv);
+document.getElementById("game-list").appendChild(gameDiv);
 }
